@@ -1,0 +1,998 @@
+2026-08-12 11:33:45,500 | INFO     | online_shopping.requests | START | GET / | auth=False
+2026-08-12 11:33:45,511 | INFO     | online_shopping.requests | END | GET / | status=404 | 10.55ms
+2026-08-12 11:33:48,796 | INFO     | online_shopping.requests | START | GET /docs | auth=False
+2026-08-12 11:33:48,808 | INFO     | online_shopping.requests | END | GET /docs | status=200 | 12.0ms
+2026-08-12 11:33:48,890 | INFO     | online_shopping.requests | START | GET /openapi.json | auth=False
+2026-08-12 11:33:48,934 | INFO     | online_shopping.requests | END | GET /openapi.json | status=200 | 43.73ms
+2026-08-12 11:33:49,943 | INFO     | online_shopping.requests | START | GET /docs | auth=False
+2026-08-12 11:33:49,943 | INFO     | online_shopping.requests | END | GET /docs | status=200 | 0.39ms
+2026-08-12 11:33:49,988 | INFO     | online_shopping.requests | START | GET /openapi.json | auth=False
+2026-08-12 11:33:49,991 | INFO     | online_shopping.requests | END | GET /openapi.json | status=200 | 3.01ms
+2026-08-12 15:19:03,365 | INFO     | online_shopping.requests | START | GET / | auth=False
+2026-08-12 15:19:03,376 | INFO     | online_shopping.requests | END | GET / | status=404 | 11.98ms
+2026-08-12 15:19:06,407 | INFO     | online_shopping.requests | START | GET /docs | auth=False
+2026-08-12 15:19:06,408 | INFO     | online_shopping.requests | END | GET /docs | status=200 | 0.89ms
+2026-08-12 15:19:06,488 | INFO     | online_shopping.requests | START | GET /openapi.json | auth=False
+2026-08-12 15:19:06,490 | INFO     | online_shopping.requests | END | GET /openapi.json | status=200 | 2.03ms
+2026-08-12 15:19:08,148 | INFO     | online_shopping.requests | START | GET /docs | auth=False
+2026-08-12 15:19:08,152 | INFO     | online_shopping.requests | END | GET /docs | status=200 | 3.7ms
+2026-08-12 15:19:08,190 | INFO     | online_shopping.requests | START | GET /openapi.json | auth=False
+2026-08-12 15:19:08,191 | INFO     | online_shopping.requests | END | GET /openapi.json | status=200 | 1.05ms
+2026-08-12 17:40:38,783 | INFO     | online_shopping.requests | START | GET / | auth=False
+2026-08-12 17:40:38,801 | INFO     | online_shopping.requests | END | GET / | status=404 | 17.51ms
+2026-08-12 17:40:42,831 | INFO     | online_shopping.requests | START | GET /docs | auth=False
+2026-08-12 17:40:42,832 | INFO     | online_shopping.requests | END | GET /docs | status=200 | 1.55ms
+2026-08-12 17:40:42,910 | INFO     | online_shopping.requests | START | GET /openapi.json | auth=False
+2026-08-12 17:40:42,958 | INFO     | online_shopping.requests | END | GET /openapi.json | status=200 | 46.69ms
+2026-08-12 17:43:05,052 | INFO     | online_shopping.requests | START | POST /api/auth/login | auth=False
+2026-08-12 17:43:05,094 | ERROR    | online_shopping.requests | ERROR | POST /api/auth/login | error=ProgrammingError | 41.91ms
+Traceback (most recent call last):
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column users.role does not exist
+LINE 1: ... AS users_password, users.mobile AS users_mobile, users.role...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\onlineShop\core\logging_config.py", line 63, in request_logging_middleware
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 2734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 1780, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 2789, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 1800, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 1279, in handle
+    await app(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 158, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 144, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 706, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 354, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\anyio\_backends\_asyncio.py", line 2641, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\anyio\_backends\_asyncio.py", line 1033, in run
+    result = context.run(func, *args)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\onlineShop\modules\auth\router.py", line 22, in login
+    return AuthService.login(request, db)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\onlineShop\modules\auth\service.py", line 23, in login
+    user = UserRepository.get_by_email(db, email)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\onlineShop\modules\users\repository.py", line 18, in get_by_email
+    return db.query(User).filter(User.email == email).first()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\query.py", line 2766, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\query.py", line 2864, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+        params,
+        ^^^^^^^
+        execution_options={"_sa_orm_load_options": self.load_options},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\session.py", line 2373, in execute
+    return self._execute_internal(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+    ...<4 lines>...
+        _add_event=_add_event,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\session.py", line 2271, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self,
+        ^^^^^
+    ...<4 lines>...
+        conn,
+        ^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+        statement, params or {}, execution_options=execution_options
+    )
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1421, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1643, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1848, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1988, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 2365, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column users.role does not exist
+LINE 1: ... AS users_password, users.mobile AS users_mobile, users.role...
+                                                             ^
+
+[SQL: SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.password AS users_password, users.mobile AS users_mobile, users.role AS users_role 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'anannyagaur@gmail.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-08-12 17:43:05,232 | ERROR    | online_shopping | UNHANDLED ERROR | POST /api/auth/login | error=(psycopg2.errors.UndefinedColumn) column users.role does not exist
+LINE 1: ... AS users_password, users.mobile AS users_mobile, users.role...
+                                                             ^
+
+[SQL: SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.password AS users_password, users.mobile AS users_mobile, users.role AS users_role 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'anannyagaur@gmail.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+NoneType: None
+2026-08-12 17:44:05,101 | INFO     | online_shopping.requests | START | POST /api/users/register | auth=False
+2026-08-12 17:44:05,121 | ERROR    | online_shopping.requests | ERROR | POST /api/users/register | error=ProgrammingError | 20.25ms
+Traceback (most recent call last):
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column users.role does not exist
+LINE 1: ... AS users_password, users.mobile AS users_mobile, users.role...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\onlineShop\core\logging_config.py", line 63, in request_logging_middleware
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 2734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 1780, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 2789, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 1800, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 1279, in handle
+    await app(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 158, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 144, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 706, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 354, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\anyio\_backends\_asyncio.py", line 2641, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\anyio\_backends\_asyncio.py", line 1033, in run
+    result = context.run(func, *args)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\onlineShop\modules\users\router.py", line 18, in register_user
+    return UserService.register(request, db)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\onlineShop\modules\users\service.py", line 24, in register
+    if UserRepository.get_by_email(db, email):
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\onlineShop\modules\users\repository.py", line 18, in get_by_email
+    return db.query(User).filter(User.email == email).first()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\query.py", line 2766, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\query.py", line 2864, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+        params,
+        ^^^^^^^
+        execution_options={"_sa_orm_load_options": self.load_options},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\session.py", line 2373, in execute
+    return self._execute_internal(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+    ...<4 lines>...
+        _add_event=_add_event,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\session.py", line 2271, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self,
+        ^^^^^
+    ...<4 lines>...
+        conn,
+        ^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+        statement, params or {}, execution_options=execution_options
+    )
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1421, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1643, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1848, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1988, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 2365, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column users.role does not exist
+LINE 1: ... AS users_password, users.mobile AS users_mobile, users.role...
+                                                             ^
+
+[SQL: SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.password AS users_password, users.mobile AS users_mobile, users.role AS users_role 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'anannyagaur@gmail.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-08-12 17:44:05,155 | ERROR    | online_shopping | UNHANDLED ERROR | POST /api/users/register | error=(psycopg2.errors.UndefinedColumn) column users.role does not exist
+LINE 1: ... AS users_password, users.mobile AS users_mobile, users.role...
+                                                             ^
+
+[SQL: SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.password AS users_password, users.mobile AS users_mobile, users.role AS users_role 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'anannyagaur@gmail.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+NoneType: None
+2026-08-12 17:44:46,115 | INFO     | online_shopping.requests | START | POST /api/auth/login | auth=True
+2026-08-12 17:44:46,120 | INFO     | online_shopping.requests | END | POST /api/auth/login | status=422 | 5.23ms
+2026-08-12 17:45:06,006 | INFO     | online_shopping.requests | START | POST /api/users/register | auth=False
+2026-08-12 17:45:06,017 | ERROR    | online_shopping.requests | ERROR | POST /api/users/register | error=ProgrammingError | 10.88ms
+Traceback (most recent call last):
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column users.role does not exist
+LINE 1: ... AS users_password, users.mobile AS users_mobile, users.role...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\onlineShop\core\logging_config.py", line 63, in request_logging_middleware
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 2734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 1780, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 2789, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 1800, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 1279, in handle
+    await app(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 158, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 144, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 706, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 354, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\anyio\_backends\_asyncio.py", line 2641, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\anyio\_backends\_asyncio.py", line 1033, in run
+    result = context.run(func, *args)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\onlineShop\modules\users\router.py", line 18, in register_user
+    return UserService.register(request, db)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\onlineShop\modules\users\service.py", line 24, in register
+    if UserRepository.get_by_email(db, email):
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\onlineShop\modules\users\repository.py", line 18, in get_by_email
+    return db.query(User).filter(User.email == email).first()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\query.py", line 2766, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\query.py", line 2864, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+        params,
+        ^^^^^^^
+        execution_options={"_sa_orm_load_options": self.load_options},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\session.py", line 2373, in execute
+    return self._execute_internal(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+    ...<4 lines>...
+        _add_event=_add_event,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\session.py", line 2271, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self,
+        ^^^^^
+    ...<4 lines>...
+        conn,
+        ^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+        statement, params or {}, execution_options=execution_options
+    )
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1421, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1643, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1848, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1988, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 2365, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column users.role does not exist
+LINE 1: ... AS users_password, users.mobile AS users_mobile, users.role...
+                                                             ^
+
+[SQL: SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.password AS users_password, users.mobile AS users_mobile, users.role AS users_role 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'anannyagaur@gmail.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-08-12 17:45:06,021 | ERROR    | online_shopping | UNHANDLED ERROR | POST /api/users/register | error=(psycopg2.errors.UndefinedColumn) column users.role does not exist
+LINE 1: ... AS users_password, users.mobile AS users_mobile, users.role...
+                                                             ^
+
+[SQL: SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.password AS users_password, users.mobile AS users_mobile, users.role AS users_role 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'anannyagaur@gmail.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+NoneType: None
+2026-08-12 17:45:20,517 | INFO     | online_shopping.requests | START | POST /api/users/register | auth=False
+2026-08-12 17:45:20,519 | INFO     | online_shopping.requests | END | POST /api/users/register | status=422 | 2.2ms
+2026-08-12 17:45:36,904 | INFO     | online_shopping.requests | START | POST /api/users/register | auth=False
+2026-08-12 17:45:36,910 | ERROR    | online_shopping.requests | ERROR | POST /api/users/register | error=ProgrammingError | 6.25ms
+Traceback (most recent call last):
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column users.role does not exist
+LINE 1: ... AS users_password, users.mobile AS users_mobile, users.role...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\onlineShop\core\logging_config.py", line 63, in request_logging_middleware
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 2734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 1780, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 2789, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 1800, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 1279, in handle
+    await app(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 158, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 144, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 706, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 354, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\anyio\_backends\_asyncio.py", line 2641, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\anyio\_backends\_asyncio.py", line 1033, in run
+    result = context.run(func, *args)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\onlineShop\modules\users\router.py", line 18, in register_user
+    return UserService.register(request, db)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\onlineShop\modules\users\service.py", line 24, in register
+    if UserRepository.get_by_email(db, email):
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\onlineShop\modules\users\repository.py", line 18, in get_by_email
+    return db.query(User).filter(User.email == email).first()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\query.py", line 2766, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\query.py", line 2864, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+        params,
+        ^^^^^^^
+        execution_options={"_sa_orm_load_options": self.load_options},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\session.py", line 2373, in execute
+    return self._execute_internal(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+    ...<4 lines>...
+        _add_event=_add_event,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\session.py", line 2271, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self,
+        ^^^^^
+    ...<4 lines>...
+        conn,
+        ^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+        statement, params or {}, execution_options=execution_options
+    )
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1421, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1643, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1848, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1988, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 2365, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column users.role does not exist
+LINE 1: ... AS users_password, users.mobile AS users_mobile, users.role...
+                                                             ^
+
+[SQL: SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.password AS users_password, users.mobile AS users_mobile, users.role AS users_role 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'anannyagaur@gmail.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-08-12 17:45:36,921 | ERROR    | online_shopping | UNHANDLED ERROR | POST /api/users/register | error=(psycopg2.errors.UndefinedColumn) column users.role does not exist
+LINE 1: ... AS users_password, users.mobile AS users_mobile, users.role...
+                                                             ^
+
+[SQL: SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.password AS users_password, users.mobile AS users_mobile, users.role AS users_role 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'anannyagaur@gmail.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+NoneType: None
+2026-08-12 17:45:48,073 | INFO     | online_shopping.requests | START | POST /api/auth/login | auth=False
+2026-08-12 17:45:48,079 | ERROR    | online_shopping.requests | ERROR | POST /api/auth/login | error=ProgrammingError | 5.89ms
+Traceback (most recent call last):
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column users.role does not exist
+LINE 1: ... AS users_password, users.mobile AS users_mobile, users.role...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\onlineShop\core\logging_config.py", line 63, in request_logging_middleware
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 2734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 1780, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 2789, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 1800, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 1279, in handle
+    await app(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 158, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 144, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 706, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\fastapi\routing.py", line 354, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\anyio\_backends\_asyncio.py", line 2641, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\anyio\_backends\_asyncio.py", line 1033, in run
+    result = context.run(func, *args)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\onlineShop\modules\auth\router.py", line 22, in login
+    return AuthService.login(request, db)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\onlineShop\modules\auth\service.py", line 23, in login
+    user = UserRepository.get_by_email(db, email)
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\onlineShop\modules\users\repository.py", line 18, in get_by_email
+    return db.query(User).filter(User.email == email).first()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\query.py", line 2766, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\query.py", line 2864, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+        params,
+        ^^^^^^^
+        execution_options={"_sa_orm_load_options": self.load_options},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\session.py", line 2373, in execute
+    return self._execute_internal(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+    ...<4 lines>...
+        _add_event=_add_event,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\session.py", line 2271, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self,
+        ^^^^^
+    ...<4 lines>...
+        conn,
+        ^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\orm\context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+        statement, params or {}, execution_options=execution_options
+    )
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1421, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1643, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1848, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1988, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 2365, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\anangaur\OneDrive - Deloitte (O365D)\Desktop\ABCapp\env\Lib\site-packages\sqlalchemy\engine\default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column users.role does not exist
+LINE 1: ... AS users_password, users.mobile AS users_mobile, users.role...
+                                                             ^
+
+[SQL: SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.password AS users_password, users.mobile AS users_mobile, users.role AS users_role 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'anannyagaur@gmail.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-08-12 17:45:48,081 | ERROR    | online_shopping | UNHANDLED ERROR | POST /api/auth/login | error=(psycopg2.errors.UndefinedColumn) column users.role does not exist
+LINE 1: ... AS users_password, users.mobile AS users_mobile, users.role...
+                                                             ^
+
+[SQL: SELECT users.id AS users_id, users.name AS users_name, users.email AS users_email, users.password AS users_password, users.mobile AS users_mobile, users.role AS users_role 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'anannyagaur@gmail.com', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+NoneType: None
