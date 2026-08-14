@@ -1,7 +1,3 @@
-"""
-BaseExternalClient — shared retry + timeout logic.
-All integration clients (payment, notification, shipping) inherit from this.
-"""
 
 import asyncio
 import logging
@@ -15,28 +11,14 @@ TIMEOUT: float = 5.0
 
 
 class ExternalClientError(Exception):
-    """Raised when all retry attempts for an external call are exhausted."""
-
-
+   
 class BaseExternalClient(ABC):
-    """
-    Abstract base that wraps any coroutine with:
-      - per-attempt asyncio timeout
-      - exponential back-off retry
-      - structured logging on every attempt, success, and failure
-    """
 
     client_name: str = "external"  
 
     @abstractmethod
     async def _call(self, **kwargs) -> dict:
-        """Single attempt at the external service. Implement in subclass."""
-
-    async def execute(self, **kwargs) -> dict:
-        """
-        Public entry point: calls _call() with retry + timeout.
-        Raises ExternalClientError if every attempt fails.
-        """
+    
         last_exc: Exception | None = None
 
         for attempt in range(1, MAX_RETRIES + 1):
