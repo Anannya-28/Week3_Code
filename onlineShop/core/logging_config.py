@@ -5,14 +5,7 @@ import sys
 
 
 def setup_logging(level: int = logging.INFO) -> None:
-    """
-    Configure root logger and named application loggers.
-
-    Sets up:
-      - Structured console output with timestamp, level and logger name
-      - Log level applied to the 'online_shopping' namespace
-      - Suppresses noisy third-party loggers (sqlalchemy, httpx)
-    """
+   
     log_format = "%(asctime)s | %(levelname)-8s | %(name)s | %(message)s"
     date_format = "%Y-%m-%d %H:%M:%S"
 
