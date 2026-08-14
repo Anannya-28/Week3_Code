@@ -1,9 +1,4 @@
 
-"""
-All DB queries for User model live here.
-Services call repository methods — never query DB directly.
-"""
-
 from sqlalchemy.orm import Session
 from modules.users.model import User
 
