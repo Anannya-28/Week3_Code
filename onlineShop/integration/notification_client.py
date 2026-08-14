@@ -1,6 +1,4 @@
-"""
-Dummy Notification / Email Client — Milestone 4 & 5.
-"""
+
 
 import asyncio
 import logging
@@ -42,8 +40,7 @@ _client = NotificationClient()
 
 
 class NotificationError(ExternalClientError):
-    """Raised when email delivery fails after all retry attempts."""
-
+  
 
 async def send_order_confirmation(payload: OrderConfirmationPayload) -> None:
     try:
