@@ -1,14 +1,3 @@
-"""
-Admin router — all routes restricted by role.
-
-Delegates business logic entirely to CatalogService and OrderService.
-The admin router is purely an access-controlled facade over existing services.
-
-RBAC Rules:
-  admin          → can manage products, categories, view all orders
-  admin+support  → can view all orders
-"""
-
 from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 
