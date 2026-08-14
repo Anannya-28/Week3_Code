@@ -37,19 +37,6 @@ Covers auth, cart, catalog, order, and user services, verifying that every busin
 Eliminates repeated setup code across all test files, ensuring consistent and reliable test environments throughout the suite.
 - Application logging -> Configures structured logging at startup with consistent timestamp, level, and module-name formatting across the entire application.
 
-### Requires confirmation or further implementation
-
-- Internal files within the `auth` module
-- Internal files within the `cart` module
-- Complete API and integration test coverage
-- Database migration management
-- Production deployment configuration
-- CI/CD pipeline
-- Payment transaction persistence
-- Inventory management
-- Customer checkout workflow
-- Production monitoring and alerting
-- External-provider retry and timeout policies
 
 ## Objectives
 
