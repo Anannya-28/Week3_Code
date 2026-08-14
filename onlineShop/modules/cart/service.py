@@ -46,10 +46,7 @@ class CartService:
 
     @staticmethod
     def add(data: CartAdd, user_id: int, db: Session) -> CartItemView:
-        """
-        Add product to cart.
-        user_id is injected from JWT token — not from request body.
-        """
+       
         product = ProductRepository.get_by_id(db, data.product_id)
 
         if not product:
