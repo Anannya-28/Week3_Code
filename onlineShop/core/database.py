@@ -1,16 +1,3 @@
-"""
-Single source of truth for DB sessions.
-
-Sync  → used by most endpoints (simple CRUD)
-Async → used by checkout + payment flows (await external APIs + DB together)
-
-WHY TWO SESSIONS:
-Mixing sync SQLAlchemy with async routes causes event-loop blocking.
-We keep sync for simple fast queries and async only where external
-I/O is also involved (checkout, payments).
-"""
-
-
 from typing import AsyncIterator, Iterator
 
 from sqlalchemy import create_engine
