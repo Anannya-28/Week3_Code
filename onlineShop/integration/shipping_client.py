@@ -1,6 +1,4 @@
-"""
-Dummy Shipping Client — Milestone 4.
-"""
+
 
 import asyncio
 import logging
