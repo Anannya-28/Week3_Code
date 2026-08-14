@@ -52,7 +52,6 @@ def update_cart(
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user),
 ):
-    """Update quantity of a cart item. Only the item owner can update."""
     return CartService.update(cart_item_id, request, current_user.id, db)
 
 
